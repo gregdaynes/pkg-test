@@ -1,0 +1,45 @@
+{
+	"name": "pkg-test",
+	"description": "testing pkg support",
+	"version": "0.0.1",
+	"license": "UNLICENSED",
+	"bin": {
+		"pkg-test": "index.js"
+	},
+	"author": {
+		"name": "Gregory Daynes",
+		"email": "gregdaynes@gmail.com",
+		"url": "https://github.com/gregdaynes"
+	},
+	"keywords": [
+		"pkg-test",
+		"Gregory Daynes"
+	],
+	"files": [
+		"index.js",
+		"utils"
+	],
+	"scripts": {
+		"build": "pkg .",
+		"format": "prettier --write \"./**/*.{js,json}\""
+	},
+	"pkg": {
+		"scripts": "./index.js",
+		"targets": [ "node16-linux-x64" ],
+		"outputPath": "./"
+	},
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"cli-alerts": "^1.2.2",
+		"cli-handle-error": "^4.4.0",
+		"cli-handle-unhandled": "^1.1.1",
+		"cli-meow-help": "^2.0.2",
+		"cli-welcome": "^2.2.2",
+		"enquirer": "^2.3.6",
+		"meow": "^9.0.0"
+	},
+	"devDependencies": {
+		"pkg": "^5.3.1",
+		"prettier": "^2.3.2"
+	}
+}
